@@ -8,7 +8,7 @@ setTimeout(() => {
 
 console.log(global);
 console.log(globalThis);
-//Both of them is ===
+//Both of them are ===
 //feat: Demonstrate usage of global and globalThis objects in Node.js
 
 // - Added setTimeout example to show asynchronous callback execution
