@@ -1,5 +1,7 @@
 //Export and imports
 
-const { add, destracter } = require("./common.modules");
+// const { add, destracter } = require("./common.modules");
 
-console.log(add(23, 45), destracter(38, 11));
+import Str, { add, destracter } from "./es-modules.js";
+
+console.log(add(23, 45), destracter(38, 11), Str);
