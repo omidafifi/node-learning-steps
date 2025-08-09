@@ -1,16 +1,25 @@
 const http = require("http");
-const products = require("./data/products.json"); // 1 nokte khieli mohem in hast ke tavasato require na tanha mitunam file haye javaScript ha va modules ha ro tavasote "require" daryaft konim hata mitunim file haye jason ro ham daryaft konim  . dar inja hata mishe file jason ro ham dar akharesh hazf konam va kar mikone
-const getProductsController = require("./controllers/product.conroller");
+const ProductsController = require("./controllers/product.controllers");
+const ErrorHandler = require("./controllers/errorHandler.controller");
 const PORT = 3000;
-
-const server = http.createServer(function (req, res) {
-  if (req.url == "/api/products") {
-    getProductsController.get(req, res);
+const server = http.createServer((req, res) => {
+  const apiRoute = "api";
+  const productsRoute = `/${apiRoute}/products`;
+  const SingleProductRoute = /\/api\/products\/[0-9]+/;
+  const { url, method } = req;
+  if (url == productsRoute && method == "GET") {
+    ProductsController.get(req, res);
+  } else if (url.match(SingleProductRoute) && method == "GET") {
+    ProductsController.getById(req, res);
+  } else if (url == productsRoute && method == "POST") {
+    ProductsController.create(req, res);
+  } else if (url.match(SingleProductRoute) && method == "PUT") {
+    ProductsController.update(req, res);
+  } else if (url.match(SingleProductRoute) && method == "DELETE") {
+    ProductsController.remove(req, res);
   } else {
-    res.writeHead(404, { "Content-Type": "application.json" }); //status 404 be manaye not found hastesh
-    res.write(JSON.stringify({ message: "Rout Not Found" })); //dar inja products ro be samte client ersal kardam
-    res.end();
+    ErrorHandler.notFound(res);
   }
 });
 server.listen(PORT);
-console.log(`Run Server on port ${PORT}  http://localhost ${PORT}`);
+console.log(`run server on port ${PORT} http://localhost:${PORT}`);
