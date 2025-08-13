@@ -16,7 +16,7 @@ async function main() {
     birthday: new Date(26, 11, 1991),
     adress: {
       province: "fars",
-      ciry: "shiraz",
+      city: "shiraz",
       street: "molasadra-street",
     },
   });
