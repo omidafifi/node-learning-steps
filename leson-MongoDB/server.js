@@ -17,7 +17,7 @@ async function main() {
     adress: {
       province: "fars",
       ciry: "shiraz",
-      street: "molasadra",
+      street: "molasadra-street",
     },
   });
   console.log("Inserted Document => ", result);
