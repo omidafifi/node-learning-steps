@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon node insertMany.js"
+    "start": "nodemon node delete.js"
   },
   "keywords": [],
   "author": "",
