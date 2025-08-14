@@ -1,14 +1,12 @@
 const toDoListDiv = document.getElementById("toDoList");
-const daysDiv = document.getElementById("days");
-
-const taskTitle = document.getElementById("taskTitle");
-const taskDescription = document.getElementById("taskDescription");
-const taskDate = document.getElementById("taskDate");
-const taskCompleted = document.getElementById("taskCompleted");
-
 console.log(toDoListDiv);
+const daysDiv = document.getElementById("days");
 console.log(daysDiv);
+const taskTitle = document.getElementById("taskTitle");
 console.log(taskTitle);
+const taskDescription = document.getElementById("taskDescription");
 console.log(taskDescription);
+const taskDate = document.getElementById("taskDate");
 console.log(taskDate);
+const taskCompleted = document.getElementById("taskCompleted");
 console.log(taskCompleted);
