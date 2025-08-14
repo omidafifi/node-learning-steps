@@ -1,4 +1,3 @@
-// گرفتن فیلدها بر اساس id
 const toDoListDiv = document.getElementById("toDoList");
 const daysDiv = document.getElementById("days");
 
