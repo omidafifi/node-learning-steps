@@ -1,13 +1,15 @@
+// گرفتن فیلدها بر اساس id
+const toDoListDiv = document.getElementById("toDoList");
+const daysDiv = document.getElementById("days");
 
-const getInformation = document.getElementById("toDoList");
-console.log(getInformation);
+const taskTitle = document.getElementById("taskTitle");
+const taskDescription = document.getElementById("taskDescription");
+const taskDate = document.getElementById("taskDate");
+const taskCompleted = document.getElementById("taskCompleted");
 
-const daysTask = document.getElementById("days");
-console.log(daysTask);
-
-
-const handler = () => {
-  console.log("Clicked on days div");
-};
-
-daysTask.addEventListener("click", handler);
+console.log(toDoListDiv);
+console.log(daysDiv);
+console.log(taskTitle);
+console.log(taskDescription);
+console.log(taskDate);
+console.log(taskCompleted);
