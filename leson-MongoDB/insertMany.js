@@ -54,5 +54,5 @@ async function main() {
   userCollection.countDocuments({}).then((count) => {
     console.log(count);
   });
-}
+} 
 main();

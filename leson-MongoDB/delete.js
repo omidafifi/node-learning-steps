@@ -1,16 +1,28 @@
 const { MongoClient, ObjectId } = require("mongodb");
 
 const DB_URL = "mongodb://localhost:27017";
-const DB_Name = "mongodb-tutorials";
+const DB_NAME = "mongodb-tutorials";
 const client = new MongoClient(DB_URL);
 
 async function main() {
-  try {
-    await client.connect();
-    console.log("Connected to MongoDB");
+  await client.connect();
+  console.log("Connected to MongoDB");
 
-    const db = client.db(DB_Name);
-    const userCollection = db.collection("user");
+  const db = client.db(DB_NAME);
+  const userCollection = db.collection("user");
+
+  // حذف بر اساس firstName
+  const result = await userCollection.findOneAndDelete({
+    firstName: "omidreza",
+  });
+
+  console.log("Deleted Document =>", result.value);
+
+  await client.close();
+}
+
+main();
+
 
     // مثال حذف یک سند بر اساس firstName
     // const result = await userCollection.deleteOne({ firstName: "omidreza" });
@@ -22,13 +34,3 @@ async function main() {
 
     // console.log("Deleted Document => ", result);
 
-
-    console.log("Current Timestamp:", Math.floor(Date.now() / 1000));
-  } catch (error) {
-    console.error("Error:", error);
-  } finally {
-    await client.close();
-  }
-}
-
-main();
