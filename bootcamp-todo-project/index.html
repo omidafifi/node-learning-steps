@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todolist-App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todolist-App</title>
 </head>
 <body>
-           <div id="toDoList">
-            <input type="text" placeholder="Enter your task for today">
-           </div>  
-           <div class="days">
-            <input type="date" name="Saturday" id="1">
-            <input type="date" name="Sunday" id="2">
-            <input type="date" name="Monday" id="3">
-            <input type="date" name="Tuesday" id="4">
-            <input type="date" name="Wednesday" id="5">
-            <input type="date" name="Thursday" id="6">
-            <input type="date" name="Friday" id="7">
-           </div>
-           <script src="./toDoList.js"></script>
+  <!-- Title -->
+  <div id="toDoList">
+    <input type="text" id="taskTitle" placeholder="Task title">
+  </div>
+
+  <!-- Description -->
+  <div>
+    <textarea id="taskDescription" placeholder="Task description"></textarea>
+  </div>
+
+  <!-- Date -->
+  <div id="days">
+    <input type="date" id="taskDate">
+  </div>
+
+<!-- Completed  -->
+  <div>
+    <label>
+      <input type="checkbox" id="taskCompleted">
+      Completed
+    </label>
+  </div>
+
+  <script src="./toDoList.js"></script>
 </body>
 </html>
