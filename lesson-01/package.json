@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/omidafifi/node-learning-steps/issues"
   },
-  "homepage": "https://github.com/omidafifi/node-learning-steps#readme"
+  "homepage": "https://github.com/omidafifi/node-learning-steps#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
