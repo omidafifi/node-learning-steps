@@ -3,6 +3,7 @@ const PORT = 3000;
 const products = require("./data/products");
 const server = http
   .createServer((req, res) => {
+    // => (Find )
     if (req.url == "/api/products") {
       res.writeHead(200, { "Content-Type": "application/json" });
       res.write(JSON.stringify(products));
