@@ -5,9 +5,7 @@ const server = http
   .createServer((req, res) => {
     // => (Find )
     if (req.url == "/api/products") {
-      res.writeHead(200, { "Content-Type": "application/json" });
-      res.write(JSON.stringify(products));
-      res.end();
+      ProductsController.get(req, res);
     } else {
       res.writeHead(404, { "Content-Type": "application/json" });
       res.write(JSON.stringify({ message: "route not found" }));
