@@ -1,5 +1,5 @@
 // MVC ==>
-  //MVC
+//MVC
 const service = require("../services/products.service");
 
 async function list(req, res, next) {
@@ -29,3 +29,4 @@ async function findMany({ limit }) {
   return db.find({}).slice(0, limit); // جای ORM/کوئری واقعی
 }
 module.exports = { findMany };
+te;
