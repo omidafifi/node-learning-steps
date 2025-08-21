@@ -10,3 +10,4 @@ async function get() {
 const ProductsController = { get };
 
 module.export = ProductsController;
+
