@@ -8,9 +8,8 @@ const server = http.createServer((req, res) => {
   if (req.url == "/api/products") {
     ProductsController.get(req, res);
   } else if (req.url.match(/\/api\/products\/[0-9]+/)) {
-   
-  }else {
-    
+    ProductsController.getById(req, res);
+  } else {
   }
 });
 server.listen(PORT, () =>
