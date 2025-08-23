@@ -10,10 +10,17 @@ async function findById(id) {
     resoleve(products.find((product) => product.id == id));
   });
 }
+async function creat(product) {
+  return new Promise((resoleve, reject) => {
+    products.push(product);
+    resoleve();
+  });
+}
 
 const ProductModel = {
   find,
   findById,
+  creat,
 };
 
 module.exports = ProductModel;
