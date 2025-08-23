@@ -10,5 +10,4 @@ let data = "Hello new file ! \n";
 //   if (err) console.log(err);
 //   else console.log("write file is done");
 // });
-
 fs.writeFileSync("write.txt", data);
