@@ -1,4 +1,5 @@
 const products = require("../data/products.json");
+const fs = require("fs");
 async function find() {
   return new Promise((resoleve, reject) => {
     resoleve(products);
@@ -13,7 +14,12 @@ async function findById(id) {
 async function creat(product) {
   return new Promise((resoleve, reject) => {
     products.push(product);
-    resoleve();
+    fs.writeFile(`${process.cwd()}/`, JASON.stringify(products), (err) => {
+      if (err) reject(err);
+      else {
+        resoleve({ message: "new product creadted", data: product });
+      }
+    });
   });
 }
 
