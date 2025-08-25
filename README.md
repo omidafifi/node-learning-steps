@@ -18,7 +18,7 @@ It contains lessons, exercises, and mini-projects I built while learning the cor
 - **file-system** → Practice with file system module (mini project)
 - **MiniProject1** → A small project to apply learned concepts
 - **bootcamp-todo-project** → A **Todo API project** with proper error handling (bootcamp-style)
-- **leson-MongoDB** → Introductory practice with MongoDB
+- **lesson-MongoDB** → Introductory practice with MongoDB
 
 ---
 
