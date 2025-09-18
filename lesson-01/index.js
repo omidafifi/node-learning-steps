@@ -20,6 +20,7 @@ moreWork();
 
 const fs = require(`fs`);
 fs.readFile(`/file.md`, (err, data) => {
+  //Asynchronous code
   if (err) throw err;
   console.log(data);
 });
