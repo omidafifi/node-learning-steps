@@ -24,3 +24,5 @@ fs.readFile(`/file.md`, (err, data) => {
   console.log(data);
 });
 moreWork(); // will run befor console.log
+
+//Sync and Asynchronous
