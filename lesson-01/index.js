@@ -14,7 +14,7 @@ console.log(globalThis);
 // - Logged `global` and `globalThis` to illustrate their equivalence in Node.js runtime
 
 const fs = require("fs");
-const data = fs.readFile(`/file.md`); // blocks here until file is read
+const data = fs.readFileSync(`/file.md`); // blocks here until file is read
 console.log(data); // will run aftar console.log
 moreWork();
 
