@@ -18,3 +18,11 @@ fs.writeFile(path.join(__dirname, `test`, `test.txt`), `utf8`, (err) => {
     console.log("somthins is error");
   }
 });
+//append file
+fs.appendFile(path.join(__dirname, `test`, `test.txt`), `utf8`, (err) => {
+  if (err) {
+    console.log("File witten...");
+  } else {
+    console.log("somthins is error");
+  }
+});
