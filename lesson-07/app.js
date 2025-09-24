@@ -26,3 +26,11 @@ fs.appendFile(path.join(__dirname, `test`, `test.txt`), `utf8`, (err) => {
     console.log("somthins is error");
   }
 });
+//read file
+fs.readFile(path.join(__dirname), `utf8`, (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});
