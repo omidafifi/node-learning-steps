@@ -1,5 +1,9 @@
 //Event Emitter
-const EventEmitter = require(`events`);
+const Logger = require(`./logger`);
+const logger = new Logger();
 
-const emitter = new EventEmitter();
+logger.on(`messageLog`, () => {
+  console.log(`Listener Call ....`);
+});
 
+logger.log(`WebNode`);
