@@ -6,6 +6,10 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.write(JSON.stringify(products));
     res.end();
+  } else {
+    res.writeHead(404, { "Content-Type": "application/json" });
+    res.write(JSON.stringify({ message: "roat not found" }));
+    res.end();
   }
 });
 server.listen(PORT, () => {
